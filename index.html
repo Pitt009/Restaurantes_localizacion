@@ -4,10 +4,89 @@
     <meta charset="utf-8">
     <title>Localizacion Restaurantes</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
+    <nav>
+      <div class="nav-wrapper  purple accent-1">
+        <a href="#" class="brand-logo center ">Restaurantes</a>
+      </div>
+    </nav>
+    <!--seccion mapa -->
+  <section class="container">
+    <div class="row">
+      <div class="col s6 offset-s3"id="map"> </div>
+    </div>
+    <!-- seccion buscar -->
+    <nav>
+      <div class="nav-wrapper teal lighten-2">
+        <form>
+         <div class="input-field">
+           <input id="search" type="search" required>
+           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+           <i class="material-icons">close</i>
+         </div>
+        </form>
+      </div>
+    </nav>
+    <!--Seccion Localizacion usuario -->
+    <button id="obtenerUbicacionUsuario">Obtener Ubicacion</button>
+    <!-- Seccion Descripcion Restaurantes -->
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="http://via.placeholder.com/150x150" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+          </div>
+          <div class="col s10">
+            <h5 class="black-text">Rosetta</h5>
+            <p>Comida Internacional</p>
+            <p>Calle Colima, 166, Delegación Cuauhtémoc, Col. Roma Norte, Roma Nte., 06700 Ciudad de México, CDMX</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="http://via.placeholder.com/150x150" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+          </div>
+          <div class="col s10">
+            <h5 class="black-text">Macelleria Roma</h5>
+            <p>Pizzas y platillos italianos</p>
+            <p>Calle Orizaba 127, Cuauhtemoc, Roma Nte., 06700 Ciudad de México, CDMX</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="http://via.placeholder.com/150x150" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+          </div>
+          <div class="col s10">
+            <h5 class="black-text">Fonda Fina</h5>
+            <p>Antojitos y comida mexicana</p>
+            <p>Medellín 79, Roma Nte., 06700 Ciudad de México, CDMX</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="http://via.placeholder.com/150x150" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+          </div>
+          <div class="col s10">
+            <h5 class="black-text">Moshi Moshi</h5>
+            <p>Sushi</p>
+            <p>Plaza Villa de Madrid 22, Cuauhtémoc, Roma, Roma Nte., 06700 Ciudad de México, CDMX</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtJ0f2AQGEufnPSfzp8Ffd0YWGQoOPreE&callback=initMap"
+    async defer></script>
   </body>
 </html>
