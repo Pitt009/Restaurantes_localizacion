@@ -1,3 +1,9 @@
+$(document).ready(cargarPagina);
+// HOISTING
+function cargarPagina() {
+  obtenerUbicacion();
+  $(".restaurant").click(cambiarUbicacion);
+}
 
 var obtenerUbicacion = function (e) {
 	if (navigator.geolocation) {
@@ -26,13 +32,23 @@ var mostrarMapa = function (coordenadas) {
     });
 }
 
+function cambiarUbicacion() {
+  var latitud = $(this).data("latitud");
+  var longitud = $(this).data("longitud");
+
+  var coordenadas = {
+    lat: latitud,
+    lng: longitud
+  };
+  mostrarMapa(coordenadas);
+}
 var restaurantes = [
  {
     "nombre": "Rosseta",
     "comida": "Internacional",
     "foto" : "http://via.placeholder.com/150x150",
-    "latitud": "19.4175048",
-    "longitud": "-99.1652178"
+    "latitud": "19.4142776",
+    "longitud": "-99.162221"
  },
  {
    "nombre": "Macelleria Roma",
@@ -45,8 +61,8 @@ var restaurantes = [
    "nombre": "Fonda Fina",
    "comida": "Antojitos y comida mexicana",
    "foto" : "http://via.placeholder.com/150x150",
-   "latitud": "19.4175048",
-   "longitud": "-99.1652178"
+   "latitud": "19.4169671",
+   "longitud": "-99.1688995"
  },
  {
    "nombre": "Moshi Moshi",
