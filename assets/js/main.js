@@ -72,3 +72,28 @@ var restaurantes = [
    "longitud": "-99.1717839"
  },
 ];
+
+var platillaRestaurantes = '<div class="card-panel grey lighten-5 z-depth-1">' +
+	'<div class="row valign-wrapper">' +
+		'<div class="col s2">' +
+			'<img src="__foto__" alt="" class="circle responsive-img">' +
+		'</div>'
+		'<div class="col s10">' +
+			'<h5 class="black-text  restaurant nombreRestaurantes" data-latitud="19.4172776" data-longitud="-99.1618953">__nombreRestaurante__</h5>' +
+			'<p>__tipoComida__</p>' +
+			'<p>__direccion__</p>' +
+		'</div>' +
+	'</div>' +
+'</div>';
+
+
+
+var reemplazar = function (restaurantes) {
+	var plantillaFinal = "";
+	restaurantes.forEach(function(restaurant){
+		platillaFinal += platillaRestaurantes.replace("__foto__", restaurant.foto).replace("__nombre__", restaurant.nombre)
+		.replace("__tipoComida__", restaurant.comida).replace("__direccion__",);
+	});
+	$(".restaurantes").html(plantillaFinal);
+};
+  reemplazar(restaurantes);
